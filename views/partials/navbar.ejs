@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg  ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Pizza
+      <img src="raj.jpg" alt="..." height="36">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutid">Offers</a>
+        </li>
+        <% if(user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">LogOut= (<%= user.name %>)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/customer">Your Orders</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <% } %>
+              <li class="nav-item">
+                <a class="nav-link" href="/add">Add Items</a>
+              </li>
+              <li class="nav-item" id="img_cart">
+                <a class="inline" id="img_cart" src href="/cart" src>
+                  <span id="cartCounter">
+                    <%= session.cart ? session.cart.totalQty : '' %>
+                  </span>
+                  <img src="cart.webp" height="36" alt=""></a>
+              </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- {"cookie":{"originalMaxAge":1144,"expires":"2022-11-09T02:19:37.031Z","httpOnly":true,"path":"/"},"cart":{"items":{"6367c0dbf34b8dff92ea96ac":{"item":{"_id":"6367c0dbf34b8dff92ea96ac","name":"Cheese Pizza","image":"1667743963877pizza2.jpg","price":"200","size":"Small","__v":0},"qty":1}},"totalQty":1,"totalPrice":"0200"}} -->

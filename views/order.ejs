@@ -1,0 +1,47 @@
+<div class="table-div">
+
+  <div class="alert alert-primary" role="alert">
+    <% if(messages.error) { %>
+      <span class="text-red-500 text-sm alert-dismissible">Message <%= messages.error %></span>
+      <% } %>
+  </div>
+
+  <div class="tableraj">
+
+    <table class="table table-dark ">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Order</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Address</th>
+          <th scope="col">Time</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% orders.forEach(function(orders) { %>
+          <tr>
+            <th scope="row">1</th>
+            <td><a href="/<%= orders.customerId %>">
+                <%= orders.customerId %>
+              </a></td>
+            <td>
+              <%= orders.phone %>
+            </td>
+            <td>
+              <%= orders.address %>
+            </td>
+            <td>
+              <%= orders.updatedAt %>
+            </td>
+            <td>
+              <%= orders.status %>
+            </td>
+          </tr>
+          <% }) %>
+
+      </tbody>
+    </table>
+  </div>
+</div>

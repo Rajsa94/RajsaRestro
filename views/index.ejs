@@ -1,0 +1,67 @@
+
+
+
+      <div class="containter-fluid main_header">
+        <div class="row">
+          <!-- left side div -->
+          <div class="col-md-10 col-12 mx-auto">
+            <div class="row">
+              <div class="col-md-6 col-12 main_header_left">
+                <p>Welcome To Pizza App</p>
+                <h1>Get The Latest <span class="txt">Pizza</span> On Your City</h1>
+                <a href="/weather"><button>Check Now</button></a>
+
+
+              </div>
+              <div class="col-md-6 col-12 main_header_right">
+
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="raj2.webp" width="270" height="340"  " alt="...">
+                    </div>
+                    
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="container">
+
+                <div class="row">
+                  <% pizza.forEach(function(image) { %>
+                    <div class="col-md-4">
+                      
+
+                      <div class="productCard">
+                        <img src="<%= image.image %>" alt="Denim Jeans" style="width:100%">
+                        <h1>
+                          <%= image.name %>
+                        </h1>
+                        <p class="price"><%= image.price %></p>
+                        <p><%= image.size %></p>
+                        <p><button data-pizza="<%= JSON.stringify(image) %>" class="add-to-cart">Add to Cart</button></p>
+                      </div>
+                     
+
+                    </div>
+                    <% }) %>
+                    
+
+                </div>
+
+              </div>
+              
+ 
