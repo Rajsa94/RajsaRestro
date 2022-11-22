@@ -4,7 +4,7 @@ const app = express()
 const   flash = require('express-flash')
 const { connection } = require("mongoose")
 const connectionDB = require("./db/db")
-const port = process.env.PORT || 8000
+const PORT = process.env.PORT || 3300
 const axios = require('axios')
 const passport = require('passport')
 
@@ -55,6 +55,6 @@ const router = require("./routes/routes.js")
 app.use(router)
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`)
 })
