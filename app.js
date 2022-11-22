@@ -24,7 +24,7 @@ app.use(flash());
 
 // Session config
 app.use(session({
-  secret: 'process.env.COOKIE_SRCRET',
+  secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false,
   store: MongoDbStore.create({
