@@ -276,11 +276,5 @@ body {
     }
 
 }
-@include media-breakpoint-up(sm) {
-    .table-div{
-      display: flex;
-      flex-direction: row;
-    }
-  }
 
 
