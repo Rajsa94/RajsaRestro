@@ -6,12 +6,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "raj": "nodemon app.js -e js,ejs,,mjs,css,scss",
     "start":"node app.js",
-    
-
     "compile:sass": " node-sass public/scss/app.scss public/css/app.css -w",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npx mix watch ",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "development": "mix",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+    
   },
   "author": "",
   "license": "ISC",
