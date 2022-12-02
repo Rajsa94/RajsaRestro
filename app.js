@@ -28,7 +28,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoDbStore.create({
-    mongoUrl: 'mongodb://localhost:27017/Session',
+    mongoUrl: "mongodb+srv://Rathore:Ra9680879504%23@cluster0.1dhc6u9.mongodb.net/Session",
     dbName: 'Pizza'
   }),
   
